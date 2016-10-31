@@ -1,0 +1,7 @@
+[user]
+	name = João D. Moreira
+	email = joao.david.moreira@gmail.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple

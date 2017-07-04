@@ -13,6 +13,9 @@ export PS1="\[\033[01;34m\]\w\[\033[00m\]\$ "
 export EDITOR="vim"
 export SVN_EDITOR="vim"
 
+# use rbenv
+eval "$(rbenv init -)"
+
 # checkout prev (older) revision
 git_prev() {
     git checkout HEAD~
@@ -25,3 +28,7 @@ git_next() {
     PREV=`git rev-list --topo-order HEAD..$HASH | tail -1`
     git checkout $PREV
 }
+
+if [ -f $HOME/.bashscripts/git-completion.bash ]; then
+    source $HOME/.bashscripts/git-completion.bash
+fi

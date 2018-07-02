@@ -30,3 +30,7 @@ git_next() {
 
 # rbenv
 eval "$(rbenv init -)"
+
+if [ -f $HOME/.bashscripts/git-completion.bash ]; then
+    source $HOME/.bashscripts/git-completion.bash
+fi

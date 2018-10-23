@@ -1,7 +1,12 @@
 [user]
 	name = João D. Moreira
-	email = joao@jdmoreira.me
+	email = joao.moreira@drivekitt.com
+	signingkey = DB7463A3080B07B394F6C0FCE59EEFF10D6D8BF7
 [credential]
 	helper = osxkeychain
 [push]
 	default = simple
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

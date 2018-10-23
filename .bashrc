@@ -13,7 +13,7 @@ export PS1="\[\033[01;34m\]\w\[\033[00m\]\$ "
 export EDITOR="vim"
 export SVN_EDITOR="vim"
 
-export PATH="/usr/local/sbin:$PATH"
+export PATH="usr/local/sbin:$PATH"
 
 # checkout prev (older) revision
 git_prev() {
@@ -33,4 +33,11 @@ eval "$(rbenv init -)"
 
 if [ -f $HOME/.bashscripts/git-completion.bash ]; then
     source $HOME/.bashscripts/git-completion.bash
+fi
+
+if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+    source ~/.gnupg/.gpg-agent-info
+    export GPG_AGENT_INFO
+else
+    eval $(gpg-agent --daemon)
 fi

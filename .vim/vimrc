@@ -30,6 +30,11 @@ syntax on
 syntax enable
 filetype plugin indent on
 
+" syntax
+au BufRead,BufNewFile *.as set syntax=cpp "angelscript
+au BufRead,BufNewFile *.angelscript set syntax=cpp "angelscript
+au BufRead,BufNewFile *.htm set filetype=html
+
 " Share osx clipboard
 set clipboard+=unnamedplus
 

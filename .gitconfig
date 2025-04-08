@@ -1,12 +1,17 @@
 [user]
 	name = João D. Moreira
-	email = joao.moreira@drivekitt.com
+	email = github@service.hxx.se
 	signingkey = DB7463A3080B07B394F6C0FCE59EEFF10D6D8BF7
 [credential]
 	helper = osxkeychain
 [push]
 	default = simple
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
-	program = gpg
+	program = gpg1
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
